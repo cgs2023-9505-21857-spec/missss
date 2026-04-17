@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>psst..</title>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fecfef);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 80px;
+      color: #333;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      width: 80%;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    p {
+      font-size: 28px;
+    }
+
+    button {
+      padding: 15px 25px;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 12px;
+    }
+
+    .yes {
+      background: #ff4da6;
+      color: white;
+    }
+
+    .no {
+      background: #ff6b6b;
+      color: white;
+      position: absolute;
+    }
+
+    #page2 {
+      display: none;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="box">
+  <h1>psst.. 👀</h1>
+  <p>joyciee, miss mo'ko?</p>
+
+  <button class="yes" onclick="nextPage()">Oo 💕</button>
+  <button class="no" onmouseover="move(this)">Hindi 😢</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="box">
+  <h1> HAHAHAHAHAH ANGASS!
+    sameeeeee 🥰</h1>
+
+
+  <img src="https://media1.tenor.com/m/crtV9o29aOsAAAAd/lebronjames-lebron.gif">
+</div>
+
+<script>
+  function nextPage() {
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "block";
+  }
+
+  function move(btn) {
+    btn.style.top = Math.random() * window.innerHeight + "px";
+    btn.style.left = Math.random() * window.innerWidth + "px";
+    btn.style.position = "absolute";
+  }
+</script>
+
+</body>
+</html>
